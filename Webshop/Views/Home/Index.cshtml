@@ -1,31 +1,114 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div id="top-bar" class="container">
+    <div class="row">
+        <div class="span4">
+            <form method="POST" class="search_form">
+                <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+            </form>
+        </div>
+        <div class="span8">
+            <div class="account pull-right">
+                <ul class="user-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="cart.html">Your Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+<div id="wrapper" class="container">
+    <section class="navbar main-menu">
+        <div class="navbar-inner main-menu">
+            <a href="index.html" class="logo pull-left"><img src="~/Content/bootstrap/img/images/logo.png" class="site_logo" alt=""></a>
+            <nav id="menu" class="pull-right">
+                <ul>
+                    <li><a href="./index.html">Homepage</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contac Us</a></li>
+                    <li><a href="./cart.html">Your Cart</a></li>
+                    <li><a href="./register.html">Login</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+
+    @*Slider*@
+    <section class="homepage-slider" id="home-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="~/Content/bootstrap/img/images/carousel/banner-1.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="~/Content/bootstrap/img/images/carousel/banner-2.jpg" alt="" />
+                    <div class="intro">
+                        <h1>Mid season sale</h1>
+                        <p><span>Up to 50% Off</span></p>
+                        <p><span>On selected items online and in stores</span></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+   
+   
+    <section id="footer-bar">
+        <div class="row">
+            <div class="span3">
+                <h4>Navigation</h4>
+                <ul class="nav">
+                    <li><a href="./index.html">Homepage</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contac Us</a></li>
+                    <li><a href="./cart.html">Your Cart</a></li>
+                    <li><a href="./register.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="span4">
+                <h4>My Account</h4>
+                <ul class="nav">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Wish List</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="span5">
+                <p class="logo"><img src="~/Content/bootstrap/img/images/logo.png" class="site_logo" alt=""></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                <br />
+                <span class="social_icons">
+                    <a class="facebook" href="#">Facebook</a>
+                    <a class="twitter" href="#">Twitter</a>
+                    <a class="skype" href="#">Skype</a>
+                    <a class="vimeo" href="#">Vimeo</a>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section id="copyright">
+        <span>Copyright 2013 bootstrappage template  All right reserved.</span>
+    </section>
 </div>
+<script type="text/javascript">
+			$(function() {
+				$(document).ready(function() {
+					$('.flexslider').flexslider({
+						animation: "fade",
+						slideshowSpeed: 4000,
+						animationSpeed: 600,
+						controlNav: false,
+						directionNav: true,
+						controlsContainer: ".flex-container" // the container that holds the flexslider
+					});
+				});
+			});
+</script>
