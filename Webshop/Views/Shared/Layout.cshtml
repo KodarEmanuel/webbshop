@@ -1,40 +1,64 @@
-﻿<!DOCTYPE html>
+﻿@*Navigation bar HTML - CSS : https://gist.github.com/benweitzel/8621181 *@
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    @*This is all the css*@
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap-responsive.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrappage.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/flexslider.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/jquery.fancybox.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/main.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/style.css"/>
-
-    @*This is all the javascript*@
-
-    <script src="~/Content/bootstrap/js/bootstrap.js"></script>
-    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/Content/bootstrap/js/common.js"></script>
-    <script src="~/Content/bootstrap/js/jquery-1.7.2.min.js"></script>
-    <script src="~/Content/bootstrap/js/jquery.fancybox.js"></script>
-    <script src="~/Content/bootstrap/js/jquery.flexslider-min.js"></script>
-    <script src="~/Content/bootstrap/js/jquery.scrolltotop.js"></script>
-    <script src="~/Content/bootstrap/js/superfish.js"></script>
-
-
+    <title>Emanuel @ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Layout.css"/>
 </head>
-<body>    
-    
-      <div>
-          @RenderBody()
+<body>        
+    <header>
 
+        <div id="navbar">
+            <ul>
+                <li><a href="#.top">Link 1</a></li>
+                <li><a href="#.top">Link 2</a></li>
+                <li><a href="#.top">Link 3</a></li>
+                <li><a href="#.top">Link 4</a></li>
+                <li><a href="#.top">Link 5</a></li>
+            </ul>
+        </div>
+    </header>
+      <div>        
+          @RenderBody()
       </div>   
   <footer>
-      <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+      <div>
+          <div class="Footer">
+
+              <div class="column-left">
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">left</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Betalningsalternativ</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Reklamationer</a></p>
+              </div>
+
+
+              <div class="column-center">
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">mid</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Betalningsalternativ</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Reklamationer</a></p>
+              </div>
+
+              <div class="column-right">
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">right</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Betalningsalternativ</a></p>
+                  <p><a class="footerlink" href="~/Views/Home/About.cshtml">Reklamationer</a></p>
+              </div> 
+
+            </div>
+
+          <p class=" ">&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+      </div>
   </footer>
   
 </body>
 </html>
+
+
+
+@*<div class="container">
+    <div class="column-center">Column center</div>
+    <div class="column-left">Column left</div>
+    <div class="column-right">Column right</div>
+</div>*@
