@@ -8,9 +8,9 @@ namespace Webshop.Controllers
 {
     public class ProductsController : Controller
     {
-        public ActionResult Category(string _PageNum)
+        public ActionResult Category()
         {
-            return View("~/Views/Products/Page1.cshtml");
+            return View("~/Views/Products/Category.cshtml");
         }
        
 
