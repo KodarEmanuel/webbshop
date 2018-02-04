@@ -12,17 +12,18 @@
 
         <div id="navbar">
             <ul>
-                <li><a href="#.top">Link 1</a></li>
-                <li><a href="#.top">Link 2</a></li>
-                <li><a href="#.top">Link 3</a></li>
-                <li><a href="#.top">Link 4</a></li>
-                <li><a href="#.top">Link 5</a></li>
+                <li class="Home-btn">@Html.ActionLink(linkText: "Home", actionName: "Home", controllerName: "Default")</></li>
+                <li>@Html.ActionLink(linkText: "Category1", actionName: "Category", controllerName: "Products", routeValues: new { Id = "Category1" }, htmlAttributes: null)</></li>
+                <li>@Html.ActionLink(linkText: "Category2", actionName: "Category", controllerName: "Products", routeValues: new { Id = "Category2" }, htmlAttributes: null)</></li>
+                <li>@Html.ActionLink(linkText: "Category3", actionName: "Category", controllerName: "Products", routeValues: new { Id = "Category3" }, htmlAttributes: null)</></li>
+                <li>@Html.ActionLink(linkText: "Category4", actionName: "Category", controllerName: "Products", routeValues: new { Id = "Category4" }, htmlAttributes: null)</></li>
+                <li>@Html.ActionLink(linkText: "Category5", actionName: "Category", controllerName: "Products", routeValues: new { Id = "Category5" }, htmlAttributes: null)</></li>
             </ul>
         </div>
     </header>
       <div>        
           @RenderBody()
-      </div>   
+      </div>    
   <footer>
       <div>
           <div class="Footer">
@@ -57,8 +58,3 @@
 
 
 
-@*<div class="container">
-    <div class="column-center">Column center</div>
-    <div class="column-left">Column left</div>
-    <div class="column-right">Column right</div>
-</div>*@
