@@ -13,13 +13,30 @@ namespace Webshop.Controllers
 
         public ActionResult Category()
         {
-            new ProdList();
-            return View();
+            ProdList prodList = new ProdList();
+
+            for (int i = 0; i < 50; i++)
+            {
+                prodList.product.Add(new Product
+                {
+                    Id = i,
+                    CatagoryId = 1,
+                    Name = "Name",
+                    Description = "Des",
+                    Price = 499,
+                    PicturePath = "../../Content/img/Cat1/Nike2.jpg"
+
+                });
+            }
+
+            return View(prodList);
         }
 
-        public ActionResult AddToCart(int Amount)
+        public ActionResult AddToCart(int Amount, int ProdId)
         {
-            return View();
+
+            return null;
+      
         }
     }
 }

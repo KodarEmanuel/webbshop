@@ -5,15 +5,16 @@
 
 }
 
-<div class="product-container">  
-   @for (int i = 0; i < Model.Getcount(); i++)
+<div class="product-container"> 
+   @foreach (var product in Model.product)
    {
+       
     <div class="col">
-        <div class="Prod_Img" style="background-image: @Model.ReturnImgPath(i))">
+        <div class="Prod_Img" style="background-image:url(@product.PicturePath)">
         </div>
         <div class="Prod_des">
             <p>
-                @Model.ReturnDescription(i);
+                @product.Description
             </p>
         </div>
 
@@ -21,6 +22,7 @@
             @using (Html.BeginForm("AddToCart", "Products"))
             {
                     <label>Amount</label>
+                    <input type="hidden" name="ProdId" value="@product.Id"/>
                     <input type="number" name="Amount" style="width:60px;"/>
                     <input type="submit" value="Add" style="width:50px;"/>
             }            

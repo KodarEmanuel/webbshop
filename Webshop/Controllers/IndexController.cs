@@ -11,7 +11,8 @@ namespace Webshop.Controllers
         // GET: Index
         public ActionResult Home()
         {
-            return View();
+
+            return null;
         }
     }
 }

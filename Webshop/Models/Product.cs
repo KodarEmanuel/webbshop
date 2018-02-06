@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Webshop.Models
 {
-    class Product
+    public class Product
     {
         public int Id;
         public int CatagoryId;
@@ -15,5 +15,6 @@ namespace Webshop.Models
         public string PicturePath;
 
     }
+    
 
 }
