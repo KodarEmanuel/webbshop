@@ -12,7 +12,7 @@ namespace Webshop.Controllers
         public ActionResult Home()
         {
 
-            return null;
+            return View();
         }
     }
 }

@@ -28,7 +28,10 @@ namespace Webshop.Controllers
 
                 });
             }
-
+            if (prodList.product.Count() == 0 )
+            {
+                return View();
+            }
             return View(prodList);
         }
 
